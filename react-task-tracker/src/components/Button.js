@@ -3,10 +3,15 @@
 
 
 const Button = ({ color = 'steelblue', text }) => {
-  console.log(text)
+    const onClick = (e) => {
+        console.log(e)
+    }
 
   return (
-    <button style={{ backgroundColor: color }} className='btn'>
+    <button
+    onClick={onClick} style={{
+    backgroundColor: color }}
+    className='btn'>
       {text}
     </button>
   )
